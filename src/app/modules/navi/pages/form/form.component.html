@@ -1,0 +1,24 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label for="first-name">Nombres: </label>
+    <input id="first-name" type="text" formControlName="firstName">
+  
+    <label for="last-name">Apellidos: </label>
+    <input id="last-name" type="text" formControlName="lastName">
+
+    <label for="first-name">Telefono: </label>
+    <input id="first-name" type="number" formControlName="phoneNumber">
+  
+    <label for="last-name">Email: </label>
+    <input id="last-name" type="email" formControlName="email">
+
+    <label for="first-name">Direccion: </label>
+    <input id="first-name" type="text" formControlName="address">
+
+    <p>Form Status: {{ profileForm.status }}</p>
+
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+    
+    
+
+

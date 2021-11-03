@@ -1,0 +1,29 @@
+.container-1{
+    /* el elemento es ubicado en su posicion inicial, aplicando cambios 
+    en su position en top,left,right,bottom, podemos mover el elemento
+    dejando el espacio donde este estaba, en ese espacio queda como si
+    aun estuviera existiendo, causando que no se pueda colocar encima de el; */
+    position: relative;
+    top: 80px;
+    left: calc(50% - 425px);
+    height: 425px;
+    width: 850px;
+    margin: 5px;
+    margin-right: 5px !important;
+    font-size: 40px;
+}
+
+.container-1 h1{
+    text-align: center;
+}
+
+.container-2{
+    /* Se le da una posicion dependiendo su posicion asignada, comienza en la 
+    posicion inicial del elemento y con los cambios de posicion en 
+    en top,left,right,bottom lo podemos colocar en un lugar de forma 
+    estatica es decir aunque exista un scrool este no se movera de su 
+    posicion asignada en pantalla; */
+    position: fixed;
+    bottom: 100px;
+    right: 150px;
+}

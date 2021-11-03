@@ -1,0 +1,73 @@
+.container-mundial-1{
+    position: relative;
+    top: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo-mundial{
+    /* la position static lo que hace es colocar el elemento en la posicion
+    que le corresponde dependiendo del flujo del container, su principal
+    caracteristica es que no es afectado por el cambio de posicion en 
+    top,right, left, bottom, como lo son los otros tipos de position; */
+    position: static;
+    top: 50px;/*esta agregado pero no afecta a su posicion estatica*/
+    right: 500px;/*esta agregado pero no afecta a su posicion estatica*/
+}
+
+.cards{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.cards p{
+    margin-right: 25px;
+}
+
+/* en los siguientes cards se les asigno una posicion z-index lo cual indica
+que es la posicion sobre la cual se manejan, supongase por niveles, entonces
+el primer componente tiene posicion 1, arriba del uno va la posicion 2, y asi
+sucesivamente, es una manera de ver y de apilar componentes, vease tambien como
+un parque donde pueden haber posiciones subterraneas -1.... como superior 1..... */
+.card-mundial-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 150px;
+    top: 50px;
+    height: 150px;
+    width: 300px;
+    z-index: 1;
+    background-color: #95b8f6;
+    text-align: center;
+}
+.card-mundial-2{
+    position: relative;
+    height: 150px;
+    width: 300px;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #add5fa;
+    text-align: center;
+}
+.card-mundial-3{
+    position: relative;
+    right: 150px;
+    bottom: 50px;
+    height: 150px;
+    width: 300px;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #b2e2f2;
+    text-align: center;
+}

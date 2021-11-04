@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-mundial',
   templateUrl: './mundial.component.html',
-  styleUrls: ['./mundial.component.css'],
+  styleUrls: ['./mundial.component.scss'],
 })
 export class MundialComponent implements OnInit {
   totalAngularPackage: any;

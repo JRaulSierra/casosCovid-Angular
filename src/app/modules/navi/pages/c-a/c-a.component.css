@@ -1,0 +1,249 @@
+.container {
+  position: relative;
+  top: 80px;
+  height: 100vh;
+}
+.title {
+  text-align: center;
+}
+.cards {
+  font-size: 20px;
+  font-weight: bold;
+}
+.cards p {
+  margin-right: 25px;
+}
+.nav {
+  width: 20%;
+  height: 80%;
+  float: left;
+  margin-left: 25px;
+}
+
+.card-mundial-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #95b8f6;
+  text-align: center;
+}
+.card-mundial-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #add5fa;
+  text-align: center;
+}
+.card-mundial-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #b2e2f2;
+  text-align: center;
+}
+
+/* este salto de linea introduce todo en una sola caja
+y hace los saltos de linea y deja espacios en blanco
+necesarios para que todo entre en el. */
+.spaceNormal {
+  position: relative;
+  width: 50%;
+  border-radius: 25px;
+  border: 2px solid gainsboro;
+  margin-bottom: 10px;
+  padding: 15px;
+  left: 2%;
+}
+/* el span en bloque agarra el elemento y consume todo el with de su
+contenedor, corriendo para abajo los demas elementos que le siguen */
+.spaceNormal span {
+  display: block;
+  background-color: rgb(243, 243, 207);
+}
+
+/* Solamente agrega los saltos de lineas que encuentra en 
+el html <br> es decir respeta los saltos de linea */
+.spacePre {
+  width: 50%;
+  border-radius: 25px;
+  border: 2px solid gainsboro;
+  margin-bottom: 10px;
+  position: relative;
+  left: 42%;
+  padding: 15px;
+  white-space: pre;
+}
+/* el display inline toma el elemento y lo distribuye en lo 
+que tiene habilitado en su contenedor. */
+.spacePre span {
+  display: inline;
+  background-color: rgb(243, 243, 207);
+}
+
+/* el nowrap no capta los saltos de lineas que estan dentro del 
+html, pero es de tener cuidado ya que este hace que el texto 
+siga como el pre, pero incluyendo algunas propiedades mas 
+que trae consigo el white space podemos hacer que siempre
+se mantenga dentro del contenedor */
+.spaceNoWrap {
+  position: relative;
+  width: 50%;
+  border-radius: 25px;
+  border: 2px solid gainsboro;
+  margin-bottom: 10px;
+  padding: 15px;
+  left: 2%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* deja el elemento en linea, con la diferencia que a este se le
+puede agregar elementos de with and height */
+.spaceNoWrap span {
+  display: inline-block;
+  background-color: rgb(243, 243, 207);
+
+  height: 70px;
+}
+
+/* el prewrap siempre ignora los espacios en blando que trae
+el html pero este si hace los saltos de linea necesarios
+para que el documento se acomode dentro de su container */
+.spacePreWrap {
+  width: 50%;
+  border-radius: 25px;
+  border: 2px solid gainsboro;
+  margin-bottom: 10px;
+  position: relative;
+  left: 42%;
+  padding: 15px;
+  white-space: pre-wrap;
+}
+/* en none hace que el objeto no aparezca en la pantalla
+pero queda su espacio, con un metodo se puede hacer que 
+se pueda ver  visibility: hidden */
+.spacePreWrap span {
+  display: none;
+  background-color: rgb(243, 243, 207);
+}
+
+/* los saltos de linea son reducidos y los acomoda para que se ajuste
+el texto con el container */
+.spacePreLine {
+  position: relative;
+  width: 50%;
+  border-radius: 25px;
+  border: 2px solid gainsboro;
+  margin-bottom: 10px;
+  padding: 15px;
+  left: 2%;
+  white-space: pre-line;
+}
+
+/* este display hereda a su padre si esta dentro de un 
+div este sera in block, si no sera en inline */
+.spacePreLine span {
+  display: inherit;
+  background-color: rgb(243, 243, 207);
+}
+/* este metodo lo que hace es heredar de su componente padre */
+.spacePInherit {
+  width: 50%;
+  border-radius: 25px;
+  border: 2px solid gainsboro;
+  margin-bottom: 10px;
+  position: relative;
+  left: 42%;
+  padding: 15px;
+  white-space: inherit;
+}
+
+
+/* convierte al elemento en una tabla */
+.table {
+    display: table;
+    border: 1px solid black;
+ }
+ /* convierte al elemento como una fila de la tabla */
+ .row {
+    display: table-row;
+ }
+ 
+ /* hace un grupo de filas y les coloca el mismo tamaño 
+ a todas */
+.tableRow{
+    display: table-row-group;
+}
+
+/* es el header titulos de la tabla */
+.tableHeader{
+    display: table-header-group;
+}
+
+/* se puede colocar como el footer de la tabla */
+.footTable{
+    display: table-footer-group;
+}
+
+/* se le asigna un valor a la columna las cuales pueden ser modificadas */
+.column1{
+    display: table-column;
+    background-color: lavender;
+}
+.column2{
+    display: table-column;
+}
+
+/* asigna un grupo de columnas que pueden ser modificadas */
+.ColGroup{
+    display: table-column-group;
+}
+
+/* es el titulo de descripcion de la tabla, el caption */
+.caption{
+    display: table-caption;
+}
+
+/* es representado como las celdas de los rows <td> */
+ .cell {
+    display: table-cell;
+ }
+ 
+ .row,
+ .cell {
+   padding: 10px;
+ }
+
+/* coloca los objetos dentro del elemento en forma de tabla row */
+ .lineTable{
+     display: inline-table;
+ }
+
+ .floatleft {
+    border: 5px solid red;
+    float: left;
+    width: 200px;
+    background: white;
+    }
+    
+    .floatright {
+    border: 5px solid green;
+    float: right;
+    width: 200px;
+    background: white;
+    }
+
+ /* este display sirve para que un elemento se convierta en 
+ modo de lista con el simbolo de lista*/
+ .listitem{
+     display: list-item;
+ }
+/* este display sirve para que un elemento se convierta en 
+ modo de lista sin con el simbolo de lista*/
+ .spaceNoWrap p{
+     display: run-in;
+ }

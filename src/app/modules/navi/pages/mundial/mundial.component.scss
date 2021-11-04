@@ -1,0 +1,13 @@
+@import '_colors';
+
+
+@each $color in red, blue {
+    .card-#{$color}{
+        background-color: $color;
+        @include cardStyle(false)
+    }
+}
+
+.card2{
+    @include cardStyle(true)
+}

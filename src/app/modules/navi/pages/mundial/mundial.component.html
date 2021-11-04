@@ -1,20 +1,16 @@
-<h1>{{texto}}</h1>
-<div className="cards">
-    <div className="card">
-      
-      <div><p>Confirmados</p></div>
-      <div>{{confirmados}}</div>
-    </div>
-    <div className="card">
-      
-      <div><p>Fallecidos</p></div>
-      <div>{{fallecidos}}</div>
-    </div>
-    <div className="card">
-      
-      <div><p>Recuperados</p></div>
-      <div>{{recuperados}}</div>
-    </div>
+<h1>{{ texto }}</h1>
+<div class="cards">
+  <div class="card-red">
+    <div><p>Confirmados</p></div>
+    <div>{{ confirmados }}</div>
   </div>
-  <button (click)="btn()">asdf</button>
-  <div>{{fallecidos}}</div>
+  <div class="card-blue">
+    <div><p>Fallecidos</p></div>
+    <div>{{ fallecidos }}</div>
+  </div>
+  <div class="card2">
+    <div><p>Recuperados</p></div>
+    <div>{{ recuperados }}</div>
+  </div>
+</div>
+<button (click)="btn()">asdf</button>

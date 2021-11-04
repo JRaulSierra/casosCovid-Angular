@@ -1,5 +1,26 @@
 // Creacion de dos variables globales para utilizar en todo el proyecto
-$blue_color: #1976d2;
-$card_color: #5ba1e7;
+$blue_color: #1e4164;
+$navFont_color: #DbE1E1;
+$title_color: #1976d2;
+
+$cardwidth: 300px, 500px;
 
 
+
+@mixin btn-op1($colorHover: royalblue){
+    border-radius: 20px;
+    w
+    &:hover{
+        background-color: $colorHover;
+    }
+}
+
+@mixin cardStyle($borderr) {
+    margin: 5px;
+    padding: 5px;
+    border-style: solid;
+    
+    @if $borderr {
+        border-radius: 20px;
+    }
+}

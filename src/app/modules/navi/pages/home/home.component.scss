@@ -1,0 +1,13 @@
+@import '_colors';
+
+h1{
+    color: $title_color;
+}
+
+.btnmundi{
+    @include btn-op1($colorHover: $blue_color);
+}
+
+.btncentro{
+    @include btn-op1();
+}

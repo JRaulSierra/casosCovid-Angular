@@ -1,0 +1,17 @@
+@import '_colors';
+
+$x:1;
+
+@while $x < 7 {
+    .card-#{$x}{
+        @include cardStyle(true);
+        width: 100px*$x;
+    }
+    $x: $x + 1;
+}
+
+@for $i from 1 to 7 {
+    .card-#{$i}{
+        background-color: #abe;
+    }
+}

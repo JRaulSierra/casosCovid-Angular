@@ -1,0 +1,19 @@
+@import '_colors';
+
+
+.form{
+    @include cardStyle(true);
+    border-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
+
+@media (orientation: landscape) {
+    .form{
+        width: 100%;
+        border-color: red;
+    }
+}

@@ -3,8 +3,9 @@
 
 @each $color in red, blue {
     .card-#{$color}{
+        @include cardStyle(false);
         background-color: $color;
-        @include cardStyle(false)
+        
     }
 }
 

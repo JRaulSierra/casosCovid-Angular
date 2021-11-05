@@ -2,12 +2,13 @@
 $blue_color: #1e4164;
 $navFont_color: #dbe1e1;
 $title_color: #1976d2;
-
 $cardwidth: 300px, 500px;
+$border-contrast: false !default;
+
 
 @mixin btn-op1($colorHover: royalblue) {
   border-radius: 20px;
-  w &:hover {
+   &:hover {
     background-color: $colorHover;
   }
 }
@@ -34,4 +35,14 @@ $cardwidth: 300px, 500px;
 .success {
     @extend .error;
     border-color: blue;
+}
+
+
+
+code {
+  background-color: #6b717f;
+  color: #d2e1dd;
+  @if $border-contrast {
+    border-color: #dadbdf;
+  }
 }

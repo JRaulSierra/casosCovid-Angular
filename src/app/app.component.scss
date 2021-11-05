@@ -1,43 +1,34 @@
-@import '_colors';
+@import "_colors";
 
 :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-  }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
 
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $blue_color;
-    font-weight: 600;
-    a{
-      color: $navFont_color;
-    };
-  }
-
-  a:visited{
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue_color;
+  font-weight: 600;
+  .toolbar-link {
     color: $navFont_color;
-  }
-
-
-  .toolbar a{
     margin: 0 25px;
     text-decoration: none;
+    & :visited {
+      color: $navFont_color;
+    }
   }
+}
 
-
-  .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  }
+.content {
+  display: flex;
+  margin: 82px auto 32px;
+  flex-direction: column;
+  align-items: center;
+}

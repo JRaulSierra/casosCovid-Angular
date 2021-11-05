@@ -1,13 +1,64 @@
-@import '_colors';
+// llamado de metodos
+@use "sass:math";
+@use "sass:string";
+@use "sass:color";
+@use "sass:list";
+@use "sass:map";
+@use "sass:selector";
+@use "sass:meta";
+// imports
+@import "_colors";
 
-h1{
-    color: $title_color;
+// funcion de pasar px a ems
+@function convert($size, $base-size: 16px) {
+  @return $size / $base-size * 1em;
 }
 
-.btnmundi{
-    @include btn-op1($colorHover: $blue_color);
+// Utilizacion del metodo sass math
+$tamañoMax: math.max(200px, 500px);
+$tamañoMin: math.min(200px, 500px);
+$tamañocard: 500px, 600px, 800px;
+$tamañoFont: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+.btnmundi {
+  @include btn-op1($colorHover: $blue_color);
+  background-color: color.adjust(#db5151, $lightness: 25%);
+  width: $tamañoMin;
 }
 
-.btncentro{
-    @include btn-op1();
+.btncentro {
+  @include btn-op1();
+  width: $tamañoMax;
+}
+
+.card {
+  width: list.nth($tamañocard, 2);
+  height: list.nth($tamañocard, 1);
+  font-weight: map.get($tamañoFont, bold);
+  margin-top: 5px;
+  border: solid;
+}
+
+.test {
+  font-size: convert(25px);
+}
+// borre los list ul li{}
+// utilizar append ("a",".active")=> a.active{}
+$lista: selector-nest("ul", "li");
+#{$lista} {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  width: 100px;
+}
+
+body.dark {
+  @include meta.load-css("_colors", $with: ("border-contrast": true));
+}
+
+h1 {
+  color: $title_color;
+  font-family: string.unquote("cursive");
 }
